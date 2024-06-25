@@ -13,14 +13,8 @@ const { login , register } = require("../auth/auth")
 router.post('/login', login);
 
 router.post('/register',register);
-  
+router.get('/register',(req,res) => res.send("register get "));
+
 
 
 module.exports = router;
-
-
-
-
-
-
-
