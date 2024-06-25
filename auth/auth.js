@@ -32,6 +32,10 @@ const login = async (req,res) => {
     }
 }
 
+const deneme = (req,res) => {
+  res.send("deneme ")
+}
+
 const register = async (req,res) => {
     const { username, email, password } = req.body;
     console.log(username,email,password);
@@ -49,7 +53,7 @@ const register = async (req,res) => {
     }
 }
 
-module.exports = { login , register }
+module.exports = { login , register , deneme }
 
 
 
