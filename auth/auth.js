@@ -33,7 +33,10 @@ const login = async (req,res) => {
 }
 
 const deneme = (req,res) => {
-  res.send("deneme ")
+
+  const { username, email, password } = req.body;
+  res.send(username,email,password)
+  
 }
 
 const register = async (req,res) => {
