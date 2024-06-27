@@ -32,13 +32,6 @@ const login = async (req,res) => {
     }
 }
 
-const deneme = (req,res) => {
-  const { username, email } = req.body;
-  res.status(200).send(username)
-  
-}
-
-
 const register = async (req,res) => {
     const { username, email, password } = req.body;
     console.log(username,email,password);
@@ -50,7 +43,7 @@ const register = async (req,res) => {
       const newUser = new User({ username, email, password: hashedPassword });
       const savedUser = await newUser.save();
   
-      res.status(201).json({ user: savedUser });
+      res.status(200).send("basarili")
     } catch (err) {
       res.status(400).json({ message: err.message });
     }
