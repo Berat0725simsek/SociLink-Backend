@@ -25,12 +25,6 @@ mongoose.connect(mongoURI)
   console.error('MongoDB bağlantı hatası:', err);
 });
 
-app.post("/deneme",(req,res) => {
-  const { username , email , password } = req.body
-  console.log(req.body);
-  res.send(email)
-
-})
 
 app.use('/user', userRouter);
 

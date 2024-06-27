@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const { login , register , deneme } = require("../auth/auth") 
+const { login , register ,deneme  } = require("../auth/auth") 
 
 
 // const {user , users , userUpdate} = require("../controllers/userController")
@@ -13,10 +13,8 @@ const { login , register , deneme } = require("../auth/auth")
 router.post('/login', login);
 
 router.post('/register',register);
-router.get('/register',(req,res) => res.send("register get "));
 
-router.post("/",deneme);
-
+router.post('/deneme',deneme);
 
 
 module.exports = router;

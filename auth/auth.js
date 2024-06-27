@@ -33,11 +33,11 @@ const login = async (req,res) => {
 }
 
 const deneme = (req,res) => {
-
-  const { username, email, password } = req.body;
-  res.send(username,email,password)
+  const { username, email } = req.body;
+  res.status(200).send(username)
   
 }
+
 
 const register = async (req,res) => {
     const { username, email, password } = req.body;
@@ -56,7 +56,7 @@ const register = async (req,res) => {
     }
 }
 
-module.exports = { login , register , deneme }
+module.exports = { login , register ,deneme }
 
 
 
